@@ -46,7 +46,7 @@ public class QuestionGenerator : MonoBehaviour
     private string apiKey;
 
     [Tooltip("Model to use - Mistral works well for Q&A")]
-    public string modelEndpoint = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2";
+    private string modelEndpoint;
 
     [Tooltip("Fallback to local questions if API fails")]
     public bool useLocalFallback = true;
@@ -78,15 +78,17 @@ public class QuestionGenerator : MonoBehaviour
     private void LoadApiKey()
     {
         string path = System.IO.Path.Combine(Application.streamingAssetsPath, "huggingface_key.txt");
+        string endpointPath = System.IO.Path.Combine(Application.streamingAssetsPath, "huggingface_modelEndpoint.txt");
 
-        if (System.IO.File.Exists(path))
+        if (System.IO.File.Exists(path) && System.IO.File.Exists(endpointPath))
         {
             apiKey = System.IO.File.ReadAllText(path).Trim();
-            Debug.Log("API Key Loaded Successfully");
+            modelEndpoint = System.IO.File.ReadAllText(endpointPath).Trim();
+            Debug.Log("API Key and Model End point Loaded Successfully");
         }
         else
         {
-            Debug.LogError("Missing huggingface_key.txt");
+            Debug.LogError("Missing huggingface_key.txt or huggingface_modelEndpoint.txt");
         }
     }
 

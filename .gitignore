@@ -108,3 +108,4 @@ InitTestScene*.unity*
 
 # Hide local Hugging Face API key
 /Assets/StreamingAssets/huggingface_key.txt
+/Assets/StreamingAssets/huggingface_modelEndpoint.txt

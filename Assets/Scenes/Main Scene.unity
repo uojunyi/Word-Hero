@@ -2110,8 +2110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83dc4007a421c3459afa0704bb856c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestionGenerator
-  apiKey: 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
-  modelEndpoint: https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct
   useLocalFallback: 0
   localQuestions: []
 --- !u!114 &1329439163
@@ -2136,8 +2134,8 @@ MonoBehaviour:
   resultText: {fileID: 2002762654}
   levelText: {fileID: 1662614879}
   scoreText: {fileID: 1268142318}
-  victoryPanel: {fileID: 0}
-  victoryText: {fileID: 0}
+  victoryPanel: {fileID: 924239671}
+  victoryText: {fileID: 1195889322}
   startLevel: 1
   maxLevel: 10
   delayAfterAnswer: 2
@@ -2263,6 +2261,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382378889}
   m_CullTransparentMesh: 1
+--- !u!1 &1426717403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426717404}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426717404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426717403}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -216.8644, y: 166.16357, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1468227246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,3 +3612,4 @@ SceneRoots:
   - {fileID: 1468227250}
   - {fileID: 1329439161}
   - {fileID: 1280448574}
+  - {fileID: 1426717404}
